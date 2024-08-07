@@ -9,11 +9,11 @@
     <style>
         body, html {
             height: 100%;
+            background-color: #000; /* Fondo negro para el body */
         }
         .container {
             display: flex;
             justify-content: center;
-            background-color: #000000; /* Fondo oscuro */
             align-items: center;
             height: 100%;
         }
@@ -24,12 +24,13 @@
             background-color: #343a40; /* Fondo oscuro */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra para darle más estilo */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra */
         }
         .input-group {
             display: flex;
             gap: 10px;
             margin-bottom: 20px;
+            align-items: center;
         }
         textarea {
             resize: none;
@@ -39,15 +40,22 @@
         textarea:invalid {
             border-color: red;
         }
+        .arrow {
+            cursor: pointer;
+            font-size: 24px;
+            color: #ffffff;
+            user-select: none;
+        }
     </style>
 </head>
-<body class="bg-dark text-light">
+<body class="text-light">
 
 <div class="container">
     <div class="content text-light">
         <h1 class="mb-4">Binary to Decimal</h1>
         <div class="input-group">
             <textarea id="binaryInput" class="form-control" placeholder="Binary" required pattern="[01]+" title="Enter a valid binary number (0s and 1s only)"></textarea>
+            <span class="arrow" onclick="reverseConversion()">&#8646;</span>
             <textarea id="decimalOutput" class="form-control" placeholder="Decimal" readonly></textarea>
         </div>
         <button class="btn btn-primary btn-block" onclick="convertBinaryToDecimal()">Convertir</button>
@@ -60,14 +68,36 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script>
+    let isBinaryToDecimal = true;
+
     function convertBinaryToDecimal() {
-        const binary = document.getElementById('binaryInput').value;
-        if (binary.match(/^[01]+$/)) {
-            const decimal = parseInt(binary, 2);
-            document.getElementById('decimalOutput').value = decimal;
+        const input = document.getElementById(isBinaryToDecimal ? 'binaryInput' : 'decimalOutput').value;
+        let result = '';
+
+        if (isBinaryToDecimal) {
+            if (input.match(/^[01]+$/)) {
+                result = parseInt(input, 2);
+            } else {
+                result = 'Invalid binary';
+            }
         } else {
-            document.getElementById('decimalOutput').value = 'Invalid binary';
+            if (input.match(/^\d+$/)) {
+                result = parseInt(input).toString(2);
+            } else {
+                result = 'Invalid decimal';
+            }
         }
+
+        document.getElementById(isBinaryToDecimal ? 'decimalOutput' : 'binaryInput').value = result;
+    }
+
+    function reverseConversion() {
+        isBinaryToDecimal = !isBinaryToDecimal;
+        document.getElementById('binaryInput').placeholder = isBinaryToDecimal ? 'Binary' : 'Decimal';
+        document.getElementById('decimalOutput').placeholder = isBinaryToDecimal ? 'Decimal' : 'Binary';
+        document.querySelector('.btn').innerText = isBinaryToDecimal ? 'Convertir' : 'Convertir';
+        document.getElementById('binaryInput').value = '';
+        document.getElementById('decimalOutput').value = '';
     }
 </script>
 </body>
