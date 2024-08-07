@@ -9,7 +9,7 @@
     <style>
         body, html {
             height: 100%;
-            background-color: #000; /* Fondo negro para el body */
+            background-color: #000; /* Fondo negro */
         }
         .container {
             display: flex;
@@ -21,7 +21,7 @@
             text-align: center;
             width: 100%;
             max-width: 500px;
-            background-color: #343a40; /* Fondo oscuro */
+            background-color: rgba(52, 58, 64, 0.8); /* Fondo oscuro con transparencia */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra */
@@ -36,6 +36,12 @@
             resize: none;
             height: 100px;
             width: 100%;
+            background-color: rgba(255, 255, 255, 0.1); /* Transparencia en textarea */
+            color: #fff; /* Texto blanco para contraste */
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Borde con transparencia */
+        }
+        textarea:focus {
+            background-color: rgba(255, 255, 255, 0.2); /* Mayor transparencia al enfocarse */
         }
         textarea:invalid {
             border-color: red;
@@ -45,6 +51,14 @@
             font-size: 24px;
             color: #ffffff;
             user-select: none;
+            opacity: 0.8; /* Opacidad para un efecto más sutil */
+        }
+        .arrow:hover {
+            opacity: 1;
+        }
+        h1 {
+            opacity: 0.9;
+            transition: opacity 0.3s;
         }
     </style>
 </head>
@@ -52,7 +66,7 @@
 
 <div class="container">
     <div class="content text-light">
-        <h1 class="mb-4">Binary to Decimal</h1>
+        <h1 id="title" class="mb-4">Binary to Decimal</h1>
         <div class="input-group">
             <textarea id="binaryInput" class="form-control" placeholder="Binary" required pattern="[01]+" title="Enter a valid binary number (0s and 1s only)"></textarea>
             <span class="arrow" onclick="reverseConversion()">&#8646;</span>
@@ -93,9 +107,10 @@
 
     function reverseConversion() {
         isBinaryToDecimal = !isBinaryToDecimal;
+        document.getElementById('title').textContent = isBinaryToDecimal ? 'Binary to Decimal' : 'Decimal to Binary';
         document.getElementById('binaryInput').placeholder = isBinaryToDecimal ? 'Binary' : 'Decimal';
         document.getElementById('decimalOutput').placeholder = isBinaryToDecimal ? 'Decimal' : 'Binary';
-        document.querySelector('.btn').innerText = isBinaryToDecimal ? 'Convertir' : 'Convertir';
+        document.querySelector('.btn').innerText = 'Convertir';
         document.getElementById('binaryInput').value = '';
         document.getElementById('decimalOutput').value = '';
     }
