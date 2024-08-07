@@ -1,0 +1,31 @@
+<!-- /view/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary to Decimal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light d-flex align-items-center justify-content-center vh-100">
+
+<div class="container bg-dark text-light border border-white rounded p-4">
+    <h1 id="title" class="text-center mb-4">Binary to Decimal</h1>
+    <div class="d-flex justify-content-between mb-3">
+        <textarea id="binaryInput" class="form-control" placeholder="Binary"></textarea>
+        <button class="btn btn-outline-light mx-2" onclick="reverseConversion()">&#8646;</button>
+        <textarea id="decimalOutput" class="form-control" placeholder="Decimal" readonly></textarea>
+    </div>
+    <button class="btn btn-primary btn-block" onclick="convert()">Convertir</button>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Controlador -->
+<script src="../controller/conversionController.js"></script>
+</body>
+</html>
