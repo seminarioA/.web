@@ -9,7 +9,7 @@
     <style>
         body, html {
             height: 100%;
-            background-color: #000; /* Fondo negro */
+            background-color: #000; /* Fondo negro para el body */
         }
         .container {
             display: flex;
@@ -21,10 +21,10 @@
             text-align: center;
             width: 100%;
             max-width: 500px;
-            background-color: rgba(52, 58, 64, 0.8); /* Fondo oscuro con transparencia */
+            background-color: #000; /* Mismo fondo que el body */
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra */
+            border: 2px solid #fff; /* Borde blanco */
         }
         .input-group {
             display: flex;
@@ -36,22 +36,20 @@
             resize: none;
             height: 100px;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.1); /* Transparencia en textarea */
-            color: #fff; /* Texto blanco para contraste */
-            border: 1px solid rgba(255, 255, 255, 0.3); /* Borde con transparencia */
+            background-color: #000; /* Mismo fondo que el body */
+            color: #fff; /* Texto blanco */
+            border: 2px solid #fff; /* Borde blanco */
         }
         textarea:focus {
-            background-color: rgba(255, 255, 255, 0.2); /* Mayor transparencia al enfocarse */
-        }
-        textarea:invalid {
-            border-color: red;
+            outline: none;
+            box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.5); /* Resaltado al enfocar */
         }
         .arrow {
             cursor: pointer;
             font-size: 24px;
             color: #ffffff;
             user-select: none;
-            opacity: 0.8; /* Opacidad para un efecto más sutil */
+            opacity: 0.8; /* Opacidad */
         }
         .arrow:hover {
             opacity: 1;
