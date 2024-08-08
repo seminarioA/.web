@@ -1,3 +1,3 @@
 # Binary to Decimal
 ## _Convierte binario a decimal con un click_
-[![Powered-By.png](https://i.postimg.cc/6QK37TmS/Powered-By.png)](https://postimg.cc/FYPm8Fmg)
+[![Dise-o-sin-t-tulo-2.png](https://i.postimg.cc/HjGmfhGK/Dise-o-sin-t-tulo-2.png)](https://postimg.cc/gLK1h42q)
