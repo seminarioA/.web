@@ -6,7 +6,7 @@
 
 Binary To Decimal utiliza varias tecnologias para funcionar correctamente 
 
-- [HTML5] - ...
+- [HTML5] - Lenguaje de Marcado
 - [CSS] - Hojas de estilo en cascada (Lenguaje de diseño gráfico)
 - [Boostrap] - Libreria de CSS Gratiuta
 - [Vercel] - Servidor Privado Virtual (VPS)
