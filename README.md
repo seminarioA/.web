@@ -9,4 +9,4 @@ Binary To Decimal utiliza varias tecnologias para funcionar correctamente
 - [HTML5] - ...
 - [CSS] - Hojas de estilo en cascada (Lenguaje de diseño gráfico)
 - [Boostrap] - Libreria de CSS Gratiuta
-- [Vercel] - VPS Free
+- [Vercel] - Servidor Privado Virtual (VPS)
