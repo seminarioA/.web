@@ -4,6 +4,7 @@
 
 
 EN: BTD is a website developed with Bootstrap v5.0, which runs client-side
+
 ES: BTD es un sitio web desarrollado con Bootstrap v5.0, que se ejecuta del lado del cliente.
 ## Tecnologias
 
