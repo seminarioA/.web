@@ -3,8 +3,8 @@
 [![Dise-o-sin-t-tulo-4.png](https://i.postimg.cc/7YgbqgB7/Dise-o-sin-t-tulo-4.png)](https://postimg.cc/PP5d48nr)
 
 
-BTD is a website developed with Bootstrap v5.0, which runs client-side
-
+EN: BTD is a website developed with Bootstrap v5.0, which runs client-side
+ES: BTD es un sitio web desarrollado con Bootstrap v5.0, que se ejecuta del lado del cliente.
 ## Tecnologias
 
 Binary To Decimal utiliza varias tecnologias para funcionar correctamente 
