@@ -1,2 +1,2 @@
 # Binary to Decimal
-## _The Last Markdown Editor, Ever_
+## _Convierte binario a decimal con un click_
